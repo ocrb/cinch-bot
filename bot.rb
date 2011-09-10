@@ -1,5 +1,6 @@
 require "cinch"
 require "cinch/plugins/memo"
+require "cinch/plugins/last_seen"
 
 Cinch::Plugins::Memo::Base.configure do |c|
   c.store   = :redis          # data store
@@ -12,7 +13,7 @@ bot = Cinch::Bot.new do
     c.server           = "irc.freenode.net"
     c.nick             = "ocruby"
     c.channels         = ["#ocruby"]
-    c.plugins.plugins  = [Cinch::Plugins::Memo::Base]
+    c.plugins.plugins  = [Cinch::Plugins::Memo::Base, Cinch::Plugins::LastSeen::Base]
   end
 
 end
