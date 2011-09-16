@@ -13,12 +13,12 @@ class Meetup
 
   def execute(m)
     m.reply "Setting topic..." 
-    sm.channel.topic = set_topic
+    m.channel.topic = generated_topic
   end
 
   timer 1800, :method => :timed
   def timed
-    Channel("#ocruby").topic = set_topic
+    Channel("#ocruby").topic = generated_topic
   end
 
   def next_meetup
@@ -26,7 +26,7 @@ class Meetup
     resp["results"].first
   end
 
-  def set_topic
+  def generated_topic
     data = next_meetup
     time = (Time.at data['time'].to_i / 1000).strftime("%b %d, %Y %I:%M%p")
      "The next event, #{data['name']} @ #{time}. See #{data['event_url']} for more details." 
