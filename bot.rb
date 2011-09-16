@@ -22,7 +22,7 @@ class Meetup
   end
 
   def next_meetup
-    resp = self.class.get "https://api.meetup.com/2/events?key=347072721a3c723a747c2467147728&sign=true&group_urlname=ocruby&page=20"
+    resp = self.class.get "https://api.meetup.com/2/events?key=347072721a3c723a747c2467147728&sign=true&group_urlname=ocruby&page=1"
     resp["results"].first
   end
 
