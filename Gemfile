@@ -10,3 +10,4 @@ gem "httparty"
 
 gem 'minitest'
 gem 'mocha'
+gem 'vcr'
