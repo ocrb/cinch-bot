@@ -1,4 +1,3 @@
-# A sample Gemfile
 source "http://rubygems.org"
 
 gem "cinch", "~> 1.1.3"
@@ -8,6 +7,9 @@ gem "cinch-fortune"
 gem "bemurphy-cinch-last_seen"
 gem "httparty"
 
-gem 'minitest'
-gem 'mocha'
-gem 'vcr'
+group :development, :test do
+  gem "rake"
+  gem 'minitest'
+  gem 'mocha'
+  gem 'timecop'
+end

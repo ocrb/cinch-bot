@@ -3,7 +3,7 @@ require File.expand_path('../../../plugins/ping', __FILE__)
 
 describe Cinch::Plugins::Ping do
   before do
-    Cinch::Plugins::Ping.stubs(:__register_with_bot).with(any_parameters).returns(true)
+    Cinch::Plugins::Ping.stubs(:__register_with_bot).returns(true)
     Cinch::Plugins::Ping.any_instance.expects(:`).with('ping -c 5 google.com').returns("google.com statistics\n5 packets\n stuff")
     @ping = Cinch::Plugins::Ping.new(Object.new)
   end

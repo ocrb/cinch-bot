@@ -1,8 +1,9 @@
 gem 'minitest'
-require 'minitest/autorun'
+require 'minitest/spec'
 require 'mocha'
 require 'cinch'
-
+require 'minitest/autorun'
+require 'timecop'
 
 class ColoredIO
   ESC = "\e["

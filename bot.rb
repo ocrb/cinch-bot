@@ -23,7 +23,7 @@ bot = Cinch::Bot.new do
       Cinch::Plugins::LastSeen::Base,
       Cinch::Plugins::Fortune,
       Cinch::Plugins::Ping,
-      ::Meetup
+      Cinch::Plugins::Meetup
     ]
   end
 
