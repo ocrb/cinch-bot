@@ -6,6 +6,7 @@ gem "cinch-memo"
 gem "cinch-fortune"
 gem "bemurphy-cinch-last_seen"
 gem "httparty"
+gem "sinatra"
 
 group :development, :test do
   gem "rake"
